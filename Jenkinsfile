@@ -9,13 +9,13 @@ pipeline {
 
     stage('audit') {
       steps {
-        sh 'sh \'npm audit fix\''
+        sh 'npm audit fix'
       }
     }
 
     stage('Deploy') {
       steps {
-        sh 'sh \'npm start\''
+        sh 'npm start'
       }
     }
 
