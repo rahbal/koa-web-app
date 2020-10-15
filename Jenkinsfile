@@ -7,5 +7,17 @@ pipeline {
       }
     }
 
+    stage('Deploy') {
+      steps {
+        sh 'sh \'npm start\''
+      }
+    }
+
+    stage('fix') {
+      steps {
+        sh 'sh \'npm audit fix\''
+      }
+    }
+
   }
 }
